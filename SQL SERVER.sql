@@ -61,6 +61,7 @@ INSERT ENDERECO VALUES('Astolfo Macedo de Souza', 632,'Centro', 'União da Vitor
 INSERT ENDERECO VALUES('Avenida Marechal Teodoro da Fonseca', 321,'Centro', 'Porto União', 'SC', 3);
 INSERT ENDERECO VALUES('Anildo Lindson', 462,'Escondidinho', 'Irineopolis', 'SC', 4);
 
+
 SELECT * FROM ENDERECO;
 
 CREATE TABLE TELEFONE(
@@ -107,3 +108,20 @@ FROM ALUNO;
 SELECT NOME, (DATEDIFF(DAY, NASCIMENTO, GETDATE()) / 365) AS IDADE
 FROM ALUNO;
 
+
+
+CREATE FUNCTION dbo.dataBR (@DATACONV DATE)
+RETURNS CHAR(10)
+AS
+BEGIN
+    RETURN		
+    	CAST(DAY(@DATACONV) AS VARCHAR(2)) + '/' +
+        CAST(MONTH(@DATACONV) AS VARCHAR(2)) + '/' +
+        CAST(YEAR(@DATACONV) AS VARCHAR(4));
+END;
+
+
+SELECT dbo.dataBR(NASCIMENTO) AS DATA
+FROM ALUNO;
+
+SELECT NOME, charindex('A', NOME, 0) AS "index" FROM ALUNO;
