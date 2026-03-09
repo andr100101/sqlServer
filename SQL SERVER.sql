@@ -60,8 +60,6 @@ INSERT ENDERECO VALUES('Antônio Fagundes', 12,'Vice King', 'União da Vitoria',
 INSERT ENDERECO VALUES('Astolfo Macedo de Souza', 632,'Centro', 'União da Vitoria', 'PR', 2);
 INSERT ENDERECO VALUES('Avenida Marechal Teodoro da Fonseca', 321,'Centro', 'Porto União', 'SC', 3);
 INSERT ENDERECO VALUES('Anildo Lindson', 462,'Escondidinho', 'Irineopolis', 'SC', 4);
-INSERT ENDERECO VALUES('Peido Frouxo', 421,'De Leve', 'Irineopolis', 'SC', 5);
-
 
 SELECT * FROM ENDERECO;
 
